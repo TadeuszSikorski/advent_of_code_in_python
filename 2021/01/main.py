@@ -14,4 +14,8 @@ transformed_data = s.transform_data(data)
 
 print(s.count_number_of_times_depth_measurement_increases(transformed_data))
 
-print(s.count_number_of_times_sum_of_measurements_in_sliding_window_increases(transformed_data))
+print(
+    s.count_number_of_times_sum_of_measurements_in_sliding_window_increases(
+        transformed_data
+    )
+)
