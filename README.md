@@ -6,3 +6,4 @@
 ## 2021
 - [Day 01](https://github.com/TadeuszSikorski/advent_of_code_in_python/tree/master/2021/01)
 - [Day 02](https://github.com/TadeuszSikorski/advent_of_code_in_python/tree/master/2021/02)
+- [Day 03](https://github.com/TadeuszSikorski/advent_of_code_in_python/tree/master/2021/03)
