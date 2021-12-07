@@ -10,4 +10,10 @@ import solution as s
 
 data = get_data("data.txt")
 
-print(s.calculate_final_score(data))
+winning_board = s.find_winning_board(data)
+
+print(s.calculate_final_score(winning_board))
+
+last_winning_board = s.find_last_winning_board(data)
+
+print(s.calculate_final_score(last_winning_board))
