@@ -47,7 +47,7 @@ def find_winning_board(data):
                     winner_board == number_out_of_range, 0, winner_board
                 )
 
-                return number, winner_board.tolist()
+                return number, winner_board
             else:
                 for index in range(0, len(winner_board)):
                     if complete_row == winner_board[:, index].tolist():
@@ -55,7 +55,7 @@ def find_winning_board(data):
                             winner_board == number_out_of_range, 0, winner_board
                         )
 
-                        return number, winner_board.tolist()
+                        return number, winner_board
 
 
 def find_last_winning_board(data):
@@ -86,7 +86,7 @@ def find_last_winning_board(data):
                 )
                 final_statement[len(selected_numbers)] = (
                     selected_numbers[-1],
-                    winner_board.tolist(),
+                    winner_board,
                 )
                 selected_numbers = []
                 break
@@ -98,7 +98,7 @@ def find_last_winning_board(data):
                         )
                         final_statement[len(selected_numbers)] = (
                             selected_numbers[-1],
-                            winner_board.tolist(),
+                            winner_board,
                         )
                         selected_numbers = []
                         breaker = 1
@@ -109,8 +109,6 @@ def find_last_winning_board(data):
 def calculate_final_score(winning_data):
     number, winner_board = winning_data
 
-    sum_of_all_unmarked_numbers = sum(
-        [number for row in winner_board for number in row]
-    )
+    sum_of_all_unmarked_numbers = np.sum(winner_board)
 
     return number * sum_of_all_unmarked_numbers
